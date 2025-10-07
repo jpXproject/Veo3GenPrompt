@@ -120,7 +120,7 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 600px) {
   header {
-  height: 220px;
+  height: 400px;
   }
   .header-text {
     font-size: 1.4em;
