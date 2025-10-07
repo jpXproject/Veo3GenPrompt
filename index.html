@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veo3 Prompt Generator - Neumorphic Dark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎥 Veo3 Prompt Generator</h1>
+    <div class="form">
+      <label>Subject</label>
+      <input type="text" id="subject" placeholder="Describe the subject..." />
+      <label>Description</label>
+      <textarea id="description" placeholder="Scene description..."></textarea>
+      <label>Camera</label>
+      <input type="text" id="camera" placeholder="Camera type..." />
+      <label>Lens</label>
+      <input type="text" id="lens" placeholder="Lens info..." />
+      <label>Lighting</label>
+      <input type="text" id="lighting" placeholder="Lighting setup..." />
+      <label>Mood</label>
+      <input type="text" id="mood" placeholder="Mood keywords..." />
+      <label>Modifiers</label>
+      <input type="text" id="modifiers" placeholder="Additional modifiers..." />
+    </div>
+
+    <div class="buttons">
+      <button id="generate">Generate Prompt</button>
+      <button id="copyPrompt">Copy Prompt</button>
+      <button id="copyJSON">Copy JSON</button>
+      <button id="downloadJSON">Download JSON</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div class="output">
+      <h2>Prompt Preview</h2>
+      <pre id="promptOutput"></pre>
+      <h2>JSON Preview</h2>
+      <pre id="jsonOutput"></pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
