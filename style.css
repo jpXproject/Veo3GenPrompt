@@ -27,8 +27,21 @@ header {
   transform: translate(-50%, -50%);
   font-size: 1.8em;
   font-weight: 600;
-  text-shadow: 0 0 15px rgba(255,255,255,0.3);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.2);
   animation: fadeIn 2s ease;
+}
+
+.header-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  opacity: 0.3;
+  object-fit: cover;
+  filter: brightness(1.3) contrast(1.2) blur(1px);
+  pointer-events: none;
+  animation: fadeIn 3s ease;
 }
 
 @keyframes fadeIn {
