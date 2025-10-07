@@ -1,12 +1,48 @@
 body {
+  margin: 0;
   background: #121212;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #00ffd0, #a100ff);
+  box-shadow: inset 5px 5px 15px rgba(0,0,0,0.6), inset -5px -5px 15px rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8em;
+  font-weight: 600;
+  text-shadow: 0 0 15px rgba(255,255,255,0.3);
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translate(-50%, -60%);}
+  to {opacity: 1; transform: translate(-50%, -50%);}
+}
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .container {
@@ -14,14 +50,20 @@ body {
   max-width: 700px;
   background: #1b1b1b;
   border-radius: 30px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 8px 8px 16px #0a0a0a, -8px -8px 16px #242424;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9em;
 }
 
 input, textarea, button {
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   border: none;
   outline: none;
   border-radius: 15px;
@@ -50,11 +92,25 @@ button:hover {
 }
 
 .output {
-  margin-top: 20px;
+  margin-top: 15px;
   background: #181818;
   border-radius: 20px;
   padding: 15px;
   box-shadow: inset 5px 5px 10px #0a0a0a, inset -5px -5px 10px #242424;
   max-height: 200px;
   overflow-y: auto;
+  font-size: 0.85em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .header-text {
+    font-size: 1.4em;
+  }
+  .container {
+    padding: 15px;
+  }
+  input, textarea, button {
+    font-size: 14px;
+  }
 }

@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎥 Veo3 Prompt Generator</h1>
+  <header>
+    <canvas id="particleCanvas"></canvas>
+    <div class="header-text">🎥 Veo³ Prompt Generator</div>
+  </header>
+
+  <main class="container">
     <div class="form">
       <label>Subject</label>
       <input type="text" id="subject" placeholder="Describe the subject..." />
@@ -40,7 +44,7 @@
       <h2>JSON Preview</h2>
       <pre id="jsonOutput"></pre>
     </div>
-  </div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
